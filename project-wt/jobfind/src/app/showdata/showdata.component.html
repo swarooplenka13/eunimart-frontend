@@ -1,0 +1,28 @@
+<div *ngIf="!crte; else elseBlock"> 
+    <div class="e">
+        <h1>Welcome {{names}}</h1>
+    </div>
+    <div class="main-content list-customer zs">
+        <div>
+            <button class="btn btn-primary block sz" type="button" (click)="create()">
+                Submit Application
+            </button>
+        </div>
+        <div class="container z">
+            <button class="btn btn-primary block sz" (click)="Signout()" type="button">
+                  Signout
+            </button>
+        </div>
+    </div>
+    <div class="con">
+        <img src="../assets/show.svg" alt="" id="z">
+    </div>
+    <div class="c">
+        <app-footer></app-footer>
+    </div>
+</div>
+<ng-template #elseBlock>
+    <div class="create">
+        <app-create></app-create>
+    </div>
+ </ng-template>   

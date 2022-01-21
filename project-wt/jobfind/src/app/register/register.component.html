@@ -1,0 +1,31 @@
+<body>
+    <div class="container1">
+        <app-home></app-home>
+    </div>
+    <div class="bv" *ngIf="!user; else elseBlock">
+        <div class="p">
+            <div class=container>
+                <h2 id="h">User Signin/Signup with <img src="https://img.icons8.com/color/48/000000/google-logo.png" />
+                </h2>
+                <button class="btn btn-primary block sz" (click)="google()" type="button">
+                    User SignIn
+                </button>
+            </div>
+            <div class=container>
+                <h2 id="w">*Only Admin</h2>
+                <button class="btn btn-danger block sz" (click)="admin()"type="button">
+                    Admin Login
+                </button>
+            </div>
+        </div>
+        <div class="con">
+            <img src="../assets/sign.svg" alt="" id="z">
+        </div>
+        <div class="c">
+            <app-footer></app-footer>
+        </div>
+    </div>
+    <ng-template #elseBlock>
+      <app-showdata></app-showdata>
+    </ng-template>
+</body>

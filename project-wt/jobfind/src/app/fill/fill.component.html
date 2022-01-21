@@ -1,0 +1,79 @@
+<body>
+    <app-home></app-home>
+    <div class="con">
+        <span id="h">Welcome Admin</span>
+        <div class="container z">
+            <button class="btn btn-primary block sz" (click)="Signout()" type="button">
+                Signout
+            </button>
+        </div>
+        <div class="bz">
+            Applicants Data
+        </div>
+        <div class="mat-elevation-z8 vs">
+            <mat-table [dataSource]="listData" class="vss">
+                <ng-container matColumnDef="firstname">
+                    <mat-header-cell *matHeaderCellDef  mat-sort-header>First Name</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.first}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="lastame">
+                    <mat-header-cell *matHeaderCellDef  mat-sort-header>Last Name</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.last}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="email" >
+                    <mat-header-cell *matHeaderCellDef mat-sort-header>Email</mat-header-cell>
+                        <mat-cell *matCellDef="let element" class="v">{{element.email}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="mobile">
+                    <mat-header-cell *matHeaderCellDef  mat-sort-header>Moblie No.</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.phone}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="address">
+                    <mat-header-cell *matHeaderCellDef  mat-sort-header>Address</mat-header-cell>
+                    <mat-cell *matCellDef="let element" class="v">{{element.address}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="city">
+                    <mat-header-cell *matHeaderCellDef  mat-sort-header>City</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.City}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="Country">
+                    <mat-header-cell *matHeaderCellDef  mat-sort-header>Country</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.Country}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="post">
+                    <mat-header-cell *matHeaderCellDef  mat-sort-header>PostCode</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.Postalcode}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="actions">
+                    <mat-header-cell *matHeaderCellDef>actions</mat-header-cell>
+                    <mat-cell *matCellDef="let row">
+                        <button class="btn btn-secondary" type="button" style="margin:10px;">Hire</button>
+                        <button class="btn btn-danger">Reject</button>
+                    </mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="Resume">
+                    <mat-header-cell *matHeaderCellDef  mat-sort-header>Resume</mat-header-cell>
+                    <mat-cell *matCellDef="let element"> <a href="{{element.resume}}"><img src="https://img.icons8.com/pastel-glyph/64/000000/download--v1.png"/></a></mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="loading">
+                    <mat-footer-cell *matFooterCellDef colspan="6">
+                        <mat-spinner></mat-spinner>
+                    </mat-footer-cell>
+                </ng-container>
+                <ng-container matColumnDef="noData">
+                    <mat-footer-cell *matFooterCellDef colspan="6">
+                        No data.
+                    </mat-footer-cell>
+                </ng-container>
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                <mat-footer-row *matFooterRowDef="['loading']" [ngClass]="{'hide':listData!=null}"></mat-footer-row>
+                <mat-footer-row *matFooterRowDef="['noData']"
+                [ngClass]="{'hide':!(listData!=null && listData.data.length==0)}"></mat-footer-row>
+                <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" [pageSize]="5" showFirstLastButtons></mat-paginator>
+            </mat-table>
+        </div>
+        <div class="c">
+            <app-footer></app-footer>
+        </div>
+        

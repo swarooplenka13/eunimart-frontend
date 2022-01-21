@@ -1,0 +1,34 @@
+.mcon{
+    display: flex;
+    flex: 1;
+    justify-content:space-around ;
+    padding: 20px;
+}
+ul > li {
+    position: relative;
+    bottom: 4px;
+    padding: 3px 2px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.con1{
+    position: relative;
+    bottom: -1px;
+    padding: 6px;
+}
+.con2{
+    padding: 6px;
+
+    position: relative;
+    bottom: 6px;
+}
+ul> li > i{
+    color: white;
+}
+footer{
+    background: black;
+    height: 13em;
+    overflow: hidden;
+   
+}

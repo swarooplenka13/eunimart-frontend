@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+.row{
+    height:50%;
+    width:50%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.sz{
+    position: relative;
+    top:-3.2rem;
+    left:72rem;
+    padding: 3px 3px;
+}
+#y{
+    position: relative;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-left:1rem;
+}
+.error{
+    color:red;
+}
+body{
+    background: linear-gradient(#fff ,#c7e08d );
+    min-height: 188vh;
+    box-sizing: border-box;
+}
+ .con1 input.ng-invalid {
+    border-left:5px solid red;
+}
+.con1 input.ng-valid {
+    border-left:5px solid green;
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+.con{
+    box-shadow: -1px 1px 5px 9px gray;
+    border-radius: 1rem;
+    height: 50%;
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top:-3rem;
+    left:24rem;
+    padding: 9px 9px;
+    margin-bottom: 9px;
+    /* background-color: #ffffff10;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); */
+}
+.btx{
+    padding: 3px 3px;
+    margin-top:6px;
+}
+.c{
+    position: relative;
+    bottom: 1rem;
+}

@@ -1,0 +1,60 @@
+.foo{
+    position: relative;
+    top:18rem;
+    /* padding: 20px 20px; */
+ } 
+ *{
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(#fff ,#c7e08d );
+    min-height: 105vh;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+.create{
+    height:120vh;
+    overflow:auto;
+}
+.create1{
+    position: relative;
+    top:20rem;
+}
+.zs{
+    position: absolute;
+    top:15rem;
+    margin-left: 25rem;
+}
+.e h1{
+    margin-top: 25px;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-left: 20px;
+}
+.sz{
+    padding: 3px 3px;
+}
+.con{
+    width:100%;
+}
+.con>img{
+    width: 40%;
+    height: 40%;
+}
+#z{
+    position: absolute;
+    bottom:15rem;
+    right: 0;
+}
+.z{
+    margin-top:1rem;
+}
+.c{
+    position: relative;
+    top:20rem;
+    /* padding: 20px 20px; */
+ }       

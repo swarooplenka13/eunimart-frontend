@@ -1,0 +1,101 @@
+.c{
+    position: relative;
+    top:15.5rem;
+    /* padding: 20px 20px; */
+ } *{
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+.bz{
+    font-size: 3rem;
+    font-weight: 700;
+    position: relative;
+    margin-top: 1.5rem;
+    left:32rem;
+
+}
+.vs{
+    position: relative;
+    left:10rem;
+    outline-width: 0;
+}
+.z{
+    margin:0.9rem 1.2rem;
+}
+.z button{
+    padding: 3px 3px;
+}
+#h{
+    margin-left: 2rem;
+    margin-top: 2.5rem;
+    font-size: 2.5rem;
+}
+#z{
+    width: 45%;
+    height: 45%;
+}
+.hide{
+    display: none;
+}
+.c{
+    position: relative;
+    bottom: 3rem;
+}
+.table{
+    margin:1rem 1rem;
+    /* overflow-x: hidden; */
+    width:70%;
+    background: linear-gradient(90deg,#fff ,#c7e08d );
+}
+body{
+    background: linear-gradient(#fff ,#c7e08d );
+    min-height: 100vh;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+.s{
+    position: relative;
+    left:31rem;
+    font-size: 2.7rem;
+}
+.in{
+    position: relative;
+    left:35rem;
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.vs{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    position: relative;
+    top:5rem;
+    width:90%;
+    left:5rem;
+    height: 100%;
+}
+.btn2{
+    outline-width:0;
+    border:none;
+    background-color: white;
+}
+a img{
+    width:40%;
+    height:40%;
+}
+.vss{
+    width: 100%;
+    /* margin:2rem 2rem; */
+}
+.vs .vss .v{
+    word-wrap: break-word;
+    display: block;
+    font-size: 0.7rem;
+    width:7%;
+    margin-right:1rem;
+}

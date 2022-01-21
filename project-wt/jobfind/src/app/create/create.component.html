@@ -1,0 +1,60 @@
+<body>
+    <!-- <app-home></app-home> -->
+    <p id="y">Please fill the Details</p>
+    <button class="btn btn-primary block sz"  type="button" (click)="Signout()">
+        Signout
+  </button>
+<div class=container>
+    <div class="con mt-3 ">
+        <form  class="example-form"[formGroup]="login" (submit)="Submit()">
+            <mat-form-field  class="example-full-width" appearance="fill">
+                <mat-label>FirstName</mat-label>
+                <input type="text" matInput formControlName="first" placeholder="FirstName">
+                <span class="error" *ngIf="first!.invalid &&first!.touched">*FirstName is Required</span>
+            </mat-form-field>    
+            <mat-form-field  class="example-full-width" appearance="fill">
+                <mat-label>LastName</mat-label>
+                <input type="text" matInput formControlName="last" placeholder="LastName">
+                <span class="error" *ngIf="last!.invalid &&last!.touched">*LastName is Required</span>
+            </mat-form-field>    
+            <mat-form-field  class="example-full-width" appearance="fill">
+                <mat-label>Email</mat-label>
+                <input type="text" matInput formControlName="email" placeholder="Ex. pat@example.com">
+                <span class="error" *ngIf="email!.invalid &&email!.touched">*Email is Required</span>
+            </mat-form-field>
+            <mat-form-field  class="example-full-width" appearance="fill">
+                <mat-label>Phone</mat-label>
+                <input type="text" matInput formControlName="phone" placeholder="123456789">
+                <span class="error" *ngIf="phone!.invalid &&phone!.touched">*phone is Required</span>
+            </mat-form-field>
+            <div class="mb-3 con1">
+              <input type=file (change)="upload($event)"/>
+            </div>
+            <mat-form-field  class="example-full-width" appearance="fill">
+                <mat-label>Address</mat-label>
+                <input type="text" matInput formControlName="address" placeholder="Ex. Address">
+                <span class="error" *ngIf="address!.invalid &&address!.touched">*address is Required</span>
+            </mat-form-field>
+            <mat-form-field  class="example-full-width" appearance="fill">
+                <mat-label>Postalcode</mat-label>
+                <input type="text" matInput formControlName="Postalcode" placeholder="Ex.530026">
+                <span class="error" *ngIf="post!.invalid &&post!.touched">*Postalcode is Required</span>
+            </mat-form-field>
+            <mat-form-field  class="example-full-width" appearance="fill">
+                <mat-label>city</mat-label>
+                <input type="text" matInput formControlName="City" placeholder="Ex.visakhapatnam">
+                <span class="error" *ngIf="City!.invalid &&City!.touched">*City is Required</span>
+            </mat-form-field>
+            <mat-form-field  class="example-full-width" appearance="fill">
+                <mat-label>Country</mat-label>
+                <input type="text" matInput formControlName="Country" placeholder="Ex.India">
+                <span class="error" *ngIf="Country!.invalid &&Country!.touched">*Country is Required</span>
+            </mat-form-field>
+        <button type="submit" class="btn btn-primary btx" >Submit</button>
+    </form>
+</div>
+</div>
+<div class="c">
+    <app-footer></app-footer>
+</div>
+</body>

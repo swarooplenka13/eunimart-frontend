@@ -1,4 +1,4 @@
-import { Component, Injectable, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Injectable, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SocialUser } from 'angularx-social-login';
@@ -6,10 +6,7 @@ import { ShowdataComponent } from '../showdata/showdata.component';
 import{FormGroup,FormControl,Validators} from '@angular/forms';
 import { FirebaseService } from '../shared/firebase.service';
 import {AngularFireStorage, AngularFireUploadTask} from '@angular/fire/compat/storage';
-import { File } from '../file';
 import { finalize,tap,Observable } from 'rxjs';
-import * as firebase from 'firebase/app';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
 declare var M:any;
 
 @Injectable({
@@ -22,32 +19,23 @@ declare var M:any;
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.css']
 })
-export class CreateComponent implements OnInit {
+export class CreateComponent implements OnInit,AfterViewInit {
 
   users!:SocialUser;
   downloadurl: string;
-  constructor(public showuser:ShowdataComponent,public router:Router,private service:FirebaseService,private af:AngularFireStorage) { }
-  
-  login=new FormGroup({
-    $key: new FormControl(null),
-     first: new FormControl('',Validators.required),
-     last: new FormControl('',Validators.required),
-     email: new FormControl('',Validators.required),
-     address: new FormControl('',Validators.required),
-     Postalcode: new FormControl('',Validators.required),
-     City: new FormControl('',Validators.required),
-     Country:new FormControl('',Validators.required),
-     resume:new FormControl(''),
-     phone:new FormControl('',[Validators.required, Validators.minLength(10)]),
-     hire:new FormControl(false)
-  })
+  chdow!:string;
+  valid!:boolean|false;
+  sett!:boolean|false;
+  constructor(public showuser:ShowdataComponent,public router:Router,public service:FirebaseService,private af:AngularFireStorage) { }
+  ngAfterViewInit(): void {
+  }
+ 
   ngOnInit(): void {
     this.resetForm();
     this.users=this.showuser.users;
-    this.login.controls['first'].setValue(this.users.firstName);
-    this.login.controls['last'].setValue(this.users.lastName);
-    this.login.controls['email'].setValue(this.users.email);
-    console.log(this.users);
+    this.service.login.controls['first'].setValue(this.users.firstName);
+    this.service.login.controls['last'].setValue(this.users.lastName);
+    this.service.login.controls['email'].setValue(this.users.email);
   }
   Signout()
   {
@@ -59,7 +47,7 @@ export class CreateComponent implements OnInit {
       form.reset();
   }
   initializeFormGroup() {
-    this.login.setValue({
+    this.service.login.setValue({
       $key: null,
       first:'',   
       last:'',      
@@ -74,17 +62,24 @@ export class CreateComponent implements OnInit {
     });
   }
   onClear() {
-    this.login.reset();
+    this.service.login.reset();
     this.initializeFormGroup();
   }
   Submit() {
-    if (this.login.valid) {
-      this.service.insertEmployee(this.login.value,this.downloadurl);
+    if (this.service.login.valid) {
+      this.service.insertEmployee(this.service.login.value,this.downloadurl,false);
+      if(this.service.k){
+      this.service.deleteEmployee(this.service.k);
+      }
       this.senddata();
-      this.login.reset();
+      this.service.login.reset();
       this.initializeFormGroup();
-      // this.notificationService.success(':: Submitted successfully');
-      alert("Successfully submitted");
+      if(this.service.check===false){
+        alert("Successfully submitted");
+      }
+      else{
+        alert("Updated Successfully");
+      }
       this.showuser.Signout();
       this.router.navigate(['/home']);
     }
@@ -94,35 +89,35 @@ export class CreateComponent implements OnInit {
   }
   get email()
   {
-   return this.login.get('email');
+   return this.service.login.get('email');
   }
   get phone()
   {
-   return this.login.get('phone');
+   return this.service.login.get('phone');
   }
   get first()
   {
-   return this.login.get('first');
+   return this.service.login.get('first');
   }
   get last()
   {
-   return this.login.get('last');
+   return this.service.login.get('last');
   }
   get address()
   {
-   return this.login.get('address');
+   return this.service.login.get('address');
   }
   get post()
   {
-   return this.login.get('Postalcode');
+   return this.service.login.get('Postalcode');
   }
   get City()
   {
-   return this.login.get('City');
+   return this.service.login.get('City');
   }
   get Country()
   {
-   return this.login.get('Country');
+   return this.service.login.get('Country');
   } 
   path:string;
   upload($event){

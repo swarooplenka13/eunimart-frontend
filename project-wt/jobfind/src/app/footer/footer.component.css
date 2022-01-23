@@ -23,12 +23,32 @@ ul > li {
     position: relative;
     bottom: 6px;
 }
-ul> li > i{
+ul> li > i,
+ul>li>a{
     color: white;
+    text-decoration: none;
 }
+
 footer{
     background: black;
     height: 13em;
     overflow: hidden;
    
+}
+
+@media only screen and (max-width:760px){
+    .mcon{
+        padding: 1px 40px;
+        margin-left: -2em;
+        margin-top: 0.7em;
+    }
+    .con,.con1,.con2 li{
+        font-size: x-small;
+      
+    }
+    .con,.con1,.con2 li h1{
+        position: relative;
+        top: 2px;
+    }
+    
 }

@@ -1,0 +1,21 @@
+<app-home></app-home>
+<body>
+    <div class="con">
+        <div id="emailHelp" class="con1">Welcome Sign In Admin</div>
+        <form  class="example-form" [formGroup]="login" (submit)="Submit()">
+            <mat-form-field  class="example-full-width" appearance="fill">
+                <mat-label>Username</mat-label>
+                <input type="text" matInput formControlName="first" placeholder="Username">
+            </mat-form-field>  
+            <mat-form-field  class="example-full-width" appearance="fill">
+                <mat-label>password</mat-label>
+                <input type="password" matInput formControlName="pass" placeholder="Password">
+            </mat-form-field>  
+            <button type="submit" class="btn btn-primary btx">Submit</button>
+        </form>
+        <div class="im"><img src="../assets/login.svg" alt=""></div>
+    </div>
+    <div class="foo">
+        <app-footer></app-footer>
+    </div>
+</body>

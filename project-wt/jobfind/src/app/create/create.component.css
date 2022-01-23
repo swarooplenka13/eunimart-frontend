@@ -4,9 +4,13 @@
     width:50%;
 }
 *{
-    margin: 0;
+    margin:0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    /* background: linear-gradient(#fff ,#c7e08d ); */
+    /* width: 100%; */
+    /* overflow-y: hidden; */
+    /* min-height: 100vh; */
 }
 .sz{
     position: relative;
@@ -24,10 +28,14 @@
 .error{
     color:red;
 }
+.y{
+    margin-top:1rem;
+}
 body{
-    background: linear-gradient(#fff ,#c7e08d );
-    min-height: 188vh;
+    /* background: linear-gradient(#fff ,#c7e08d ); */
+    min-height: 120h;
     box-sizing: border-box;
+    /* overflow-y:scroll ; */
 }
  .con1 input.ng-invalid {
     border-left:5px solid red;
@@ -44,24 +52,24 @@ body{
   .example-full-width {
     width: 100%;
   }
-  
+  form .con1 .gf{
+      margin-bottom: 5px;
+  }
 .con{
-    box-shadow: -1px 1px 5px 9px gray;
+    /* box-shadow: -1px 1px 5px 9px gray; */
     border-radius: 1rem;
-    height: 50%;
+    height:150vh;
     width:50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
-    top:-3rem;
+    top:-5rem;
     left:24rem;
-    padding: 9px 9px;
+    padding: 1.5rem 1.5rem;
     margin-bottom: 9px;
-    /* background-color: #ffffff10;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px); */
+    /* background-color: white; */
 }
 .btx{
     padding: 3px 3px;
@@ -69,5 +77,8 @@ body{
 }
 .c{
     position: relative;
-    bottom: 1rem;
+    top:-1rem;
 }
+/* .con form{
+    height: 100vh;
+} */

@@ -1,31 +1,35 @@
 <body>
     <div class="container1">
         <app-home></app-home>
-    </div>
-    <div class="bv" *ngIf="!user; else elseBlock">
-        <div class="p">
-            <div class=container>
-                <h2 id="h">User Signin/Signup with <img src="https://img.icons8.com/color/48/000000/google-logo.png" />
-                </h2>
-                <button class="btn btn-primary block sz" (click)="google()" type="button">
-                    User SignIn
-                </button>
+        <div class="bv" *ngIf="!user; else elseBlock">
+            <div class="p">
+                <div class=container>
+                    <h2 id="h">User SignIn/Signup with <img
+                            src="https://img.icons8.com/color/48/000000/google-logo.png" />
+                    </h2>
+                    <button class="btn btn-primary block sz" (click)="google()" type="button">
+                        User SignIn
+                    </button>
+                </div>
             </div>
-            <div class=container>
-                <h2 id="w">*Only Admin</h2>
-                <button class="btn btn-danger block sz" (click)="admin()"type="button">
-                    Admin Login
-                </button>
+            <div class="pa">
+                <p>
+                    There are many points in my life, when I recall being very proud of myself for achieving goals and
+                    accomplishments. One particular point in my life would be when I got my first job. Getting my first
+                    job was very big and important to me. The reason the job was so important to me was because it gave
+                    me a sense independence, considering I was one of those spoiled rotten kids. It might seem like the
+                    perfect life for some to always get what you want, regardless of being a child or adult.
+                </p>
             </div>
-        </div>
-        <div class="con">
-            <img src="../assets/sign.svg" alt="" id="z">
-        </div>
-        <div class="c">
-            <app-footer></app-footer>
+            <div class="con">
+                <img src="../assets/sign.svg" alt="" id="z">
+            </div>
+            <div class="c">
+                <app-footer></app-footer>
+            </div>
         </div>
     </div>
     <ng-template #elseBlock>
-      <app-showdata></app-showdata>
+        <app-showdata></app-showdata>
     </ng-template>
 </body>

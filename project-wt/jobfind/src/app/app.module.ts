@@ -31,6 +31,8 @@ import{MatIconModule} from '@angular/material/icon';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
     FillComponent,
     ShowdataComponent,
     CreateComponent,
+    AdminloginComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

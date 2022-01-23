@@ -48,4 +48,68 @@ header ul li a:hover
     color: #fff;
     transition: 0.2s;
 }
-                                                      
+    
+@media only screen and (max-width:760px){
+    header{
+        padding:1px;
+    }
+    header .logo{
+        font-size:large;
+       
+    }
+    header ul li{
+        font-size: x-small;
+    }
+    header ul li a{
+        padding: 0px;
+    }
+}
+
+/* @media (max-width: 1000px){
+    header{
+      padding: 0 40px 0 50px;
+    }
+  }
+  @media (max-width: 920px) {
+    header .menu-btn i{
+      display: block;
+    }
+    #click:checked ~ .menu-btn i:before{
+      content: "\f00d";
+    }
+    header ul{
+      position: fixed;
+      top: 80px;
+      left: -100%;
+      background: rgb(98, 98, 98);
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+      display: block;
+      transition: all 0.3s ease;
+    }
+    #click:checked ~ ul{
+      left: 0;
+    }
+    header ul li{
+      width: 100%;
+      margin: 40px 0;
+    }
+    header ul li a{
+      width: 100%;
+      margin-left: -100%;
+      display: block;
+      font-size: 20px;
+      transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    #click:checked ~ ul li a{
+      margin-left: 0px;
+    }
+    header ul li a.active,
+    header ul li a:hover{
+      background: none;
+      color: cyan;
+    }
+  } */
+
+

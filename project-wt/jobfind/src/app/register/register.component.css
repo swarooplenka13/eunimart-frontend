@@ -7,10 +7,13 @@
 }
 body{
     background: linear-gradient(#fff ,#c7e08d );
-    min-height: 100vh;
+    min-height: 90vh;
     box-sizing: border-box;
     scroll-behavior: smooth;
     overflow: hidden;
+}
+.bv{
+    height: 90vh;
 }
 .p
 {
@@ -19,39 +22,95 @@ justify-content: space-between;
 flex-direction: column;
 align-items: center;
 margin-top: 25px;
-position: absolute;
+position: relative;
 gap:5rem;
-top:6rem;
+top:3rem;
 left: 20rem;
 margin-left: 10px;
 }
-#w{
+/* #w{
     margin-bottom: 10px;
     position: absolute;
     bottom: 1rem;
     top:7.5rem;
-}
+} */
 .c{
    position: relative;
-   top:25rem;
+   top:-13rem;
    /* padding: 20px 20px; */
-}                                                      
+}
+.pa{ 
+    margin-top: 2rem;
+    position: relative;
+    top:4rem;
+    margin-left:3rem;
+    width: 50%;
+}                                                     
 .sz{
+    margin-top: 8px;
     padding: 6px 4px;
 }
 #z{
-    position: absolute;
-    bottom:15rem;
-    right: 0;
+    position:relative;
+    bottom:14rem;
+    left: 50em;
 }
 .con>img{
-    width: 40%;
-    height: 40%;
+    width: 35%;
+    height:35%;
 }
 #h{
     margin-bottom: 10px;
+    margin-left: -10rem;
+    font-size: 1.5rem;
 }
 .cf{
     position: relative;
     bottom:6rem;
+}
+
+@media only screen and (max-width:760px){
+    body{
+        min-height: 90vh;
+        overflow-y: auto;
+    }
+    .pa >p {
+        font-size: medium;
+        position: relative;
+        top: -1em;
+        width: 110%;
+    }
+    .c{
+        height: 50px;
+        width: 100%;
+        position: relative;
+        top: 2em;
+    }
+    .p .container #h{
+        position: relative;
+        left: -5em;
+        
+    }
+    .p .container button{
+        position: relative;
+        left: -14em;
+ 
+    }
+   .bv .con>#z{
+        position: relative;
+        left: 4em;
+        width: 70%;
+        bottom:-2em;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        height: 10%;
+    }
+
+}
+@media only screen and (min-width:768px) {
+    body{
+        min-height: 100vh;
+        overflow-y: auto;
+    }
+
 }

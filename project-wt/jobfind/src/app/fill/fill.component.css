@@ -79,6 +79,12 @@ body{
     left:5rem;
     height: 100%;
 }
+.spin{
+    position: relative;
+    margin-top: 1rem;
+    left:32rem;
+    margin-bottom: 1rem;
+}
 .btn2{
     outline-width:0;
     border:none;
@@ -98,4 +104,17 @@ a img{
     font-size: 0.7rem;
     width:7%;
     margin-right:1rem;
+}
+
+.but #elem {
+    padding: 0;
+    border: none;
+}
+@media only screen and(max-width:760px) {
+    body{
+        overflow-x: auto;
+    }
+    .vs .vss{
+        overflow:auto;
+    }
 }

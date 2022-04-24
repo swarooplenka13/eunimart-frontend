@@ -1,0 +1,15 @@
+
+    <div class="center">
+        <li *ngFor="let data of dat">
+            <div class="card">
+                <div class="general">
+                    <img src="{{this.data['avatar']}}" >
+                    <h2>{{this.data['id']}}</h2>
+                    <h3>{{this.data['first_name']}}</h3>
+                    <h3>{{this.data['last_name']}}</h3>
+                    <h3>{{this.data['email']}}</h3>
+                    <a routerLink="/users/{{this.data['id']}}">View</a>
+            </div>
+        </div>
+    </li>
+    </div>
